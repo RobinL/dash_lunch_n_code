@@ -1,0 +1,5 @@
+a=c(1:999)
+b<-ifelse(a%%3==0,1,0)
+c<-ifelse(a%%5==0,1,0)
+d<-ifelse(c+b>0,1,0)
+sum(a*d)
