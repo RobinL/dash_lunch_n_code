@@ -9,15 +9,19 @@ sieve = np.arange(p)
 
 
 for z in np.arange(2,p):
+	#We build a prime sieve as we go (ish, if we put & sieve > z in the update bit we'd get a sieve)
+	# - skip to next z if we've checked factors of z already
+	if sieve[z] == 0:
+		continue
+	#If we've found a divisor, factor it out as much as we can
+	while x % z == 0:
+		x = x/z
+
 	if z >= x:
 		print z
 		break
-	if sieve[z] == 0:
-		continue
-	while x % z == 0:
-		x = x/z
 	# Update sieve
-	sieve[(sieve % z == 0) & (sieve > z)] = 0
+	sieve[(sieve % z == 0)] = 0
 
 
 
