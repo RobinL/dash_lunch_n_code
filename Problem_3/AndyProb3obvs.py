@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np, math as m
 x=600851475143
 #x=102053
 #largest possible factor would be sqrt(x)
