@@ -11,7 +11,7 @@ allfactors=c(smallfactors[2:length(smallfactors)],rev(bigfactors[2:length(bigfac
 # Get the outer remainder array (every factor%%every factor)
 outer_fac=outer(allfactors,allfactors,"%%")
 
-# Biggest prime is the factor with non-zero remainder for every smaller factor.
+# Biggest prime is the biggest factor with non-zero remainder for every smaller factor.
 # Corresponds to the last row in outer_fac with no zero in the lower triangle, so we find that.
 filled_upper=outer_fac+upper.tri(outer_fac,diag=TRUE) #Fill in the upper triangle and diagonal
 check_zeros=apply(filled_upper,1,prod) # Multiply through the rows to find those with a zero.  A bit lazy.
