@@ -23,7 +23,7 @@ for z in np.arange(2,p):
 		break
 	# Update sieve
 	sieve[(sieve % z == 0)] = 0
-# If that hasn't worked, then the remains of x is greater than p, and prime (proof is left to the reader)
+# If that hasn't worked, then the remains of x is greater than p, and prime, assuming p=y (proof is left to the reader)
 if x>p:
 	print x
 
