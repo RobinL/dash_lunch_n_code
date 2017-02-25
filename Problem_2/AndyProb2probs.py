@@ -14,6 +14,6 @@ for i in range(max):
 	if i%3==2:
 		x[i]=fib(i)
 
-print sum(x)
+print (sum(x))
 
 
